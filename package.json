@@ -13,7 +13,7 @@
     "fixAll": "npm run format && npm run lintfix",
     "html": "gulp",
 		"start": "gulp",
-    "build": "gulp libs_style && gulp svg_css && gulp ttf && gulp fonts && gulp style && gulp libs_js && gulp build_js && gulp rastr && gulp webp && gulp svg_sprite && gulp html"
+    "build": "gulp libs_style && gulp svg_css && gulp ttf && gulp fonts && gulp style && gulp libs_js && gulp build_js && gulp rastr &&  gulp webp && gulp svg_sprite && gulp html"
   },
   "author": "",
   "license": "ISC",
