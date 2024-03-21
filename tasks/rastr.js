@@ -10,7 +10,7 @@ const bs = require('browser-sync');
 const plumber = require('gulp-plumber');
 
 module.exports = function rastr() {
-	return src('src/img/**/*.+(png|jpg|jpeg)')
+	return src('src/img/**/*.+(png|jpg|jpeg|gif|svg|ico)')
 		.pipe(plumber())
 		.pipe(changed('build/img'))
 		.pipe(imagemin({
@@ -35,33 +35,5 @@ module.exports = function rastr() {
 				imagemin.svgo()
 			], ), )
 		.pipe(dest('build/img'))
-		.pipe(bs.stream())
-}
-module.exports = function rastr_svg() {
-	return src('src/img/**/*.+(gif|svg|ico)')
-		.pipe(plumber())
-		.pipe(changed('build/img/svg'))
-		.pipe(imagemin({
-				interlaced: true,
-				progressive: true,
-				optimizationLevel: 5,
-			},
-			[
-				recompress({
-					loops: 6,
-					min: 50,
-					max: 90,
-					quality: 'high',
-					use: [pngquant({
-						quality: [0.8, 1],
-						strip: true,
-						speed: 1
-					})],
-				}),
-				imagemin.gifsicle(),
-				imagemin.optipng(),
-				imagemin.svgo()
-			], ), )
-		.pipe(dest('build/img/svg'))
 		.pipe(bs.stream())
 }

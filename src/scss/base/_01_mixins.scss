@@ -9,6 +9,12 @@
 		font-display: swap;
 	}
 }
+@mixin font-family($name,$weight: 400,$style: normal){
+	font-family:"#{$name}",sans-serif;
+	font-weight: $weight;
+	font-style: $style;
+	font-display: swap;
+}
 
 @mixin bg ($size:"contain", $position: "center") {
 	background-size: #{$size};

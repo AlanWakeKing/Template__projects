@@ -1,23 +1,19 @@
 {
-  "name": "test-project",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "easy-webdev-startpack",
+  "version": "3.1.1",
+  "description": "HTML5+CSS3 template for easy start website project'",
+  "main": "gulpfile.js",
   "scripts": {
-    "test": "echo 'Привет!'",
-    "check": "prettier --check './src/**/*.{html,css,js}'",
-    "format": "prettier --write './src/**/*.{html,css,js}'",
-    "lint": "stylelint './src/**/*.css'",
-    "lintfix": "stylelint './src/**/*.css' --fix",
-    "checkAll": "npm run check && npm run lint",
-    "fixAll": "npm run format && npm run lintfix",
     "html": "gulp",
-		"start": "gulp",
-    "build": "gulp libs_style && gulp svg_css && gulp ttf && gulp fonts && gulp style && gulp libs_js && gulp build_js && gulp rastr &&  gulp webp && gulp svg_sprite && gulp html"
+    "start": "gulp",
+    "php": "gulp dev_php",
+    "build": "gulp libs_style && gulp svg_css && gulp ttf && gulp fonts && gulp style && gulp libs_js && gulp build_js && gulp rastr && gulp webp && gulp svg_sprite && gulp html && gulp php",
+    "ftp": "gulp deploy",
+    "build-ftp": "npm run build && npm run ftp"
   },
   "author": "",
   "license": "ISC",
-	"devDependencies": {
+  "devDependencies": {
     "@babel/core": "^7.14.2",
     "@babel/preset-env": "^7.14.2",
     "browser-sync": "^2.26.14",
@@ -44,7 +40,8 @@
     "gulp-webp": "^4.0.1",
     "imagemin-jpeg-recompress": "^7.0.0",
     "imagemin-pngquant": "^9.0.2",
-    "require-dir": "^1.2.0"
+    "require-dir": "^1.2.0",
+    "vinyl-ftp": "^0.6.1"
   },
   "dependencies": {
     "sass": "^1.56.0"

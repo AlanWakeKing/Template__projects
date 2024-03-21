@@ -4,7 +4,7 @@ module.exports = function bs_html() {
 	bs.init({
 		server: {
 			baseDir: 'build/',
-			host: 'localhost',
+			host: '192.168.0.104',
 		},
 		callbacks: {
 			ready: function (err, bs) {

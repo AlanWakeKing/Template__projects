@@ -16,13 +16,3 @@ module.exports = function ttf(done) {
     .pipe(dest('build/fonts'))
   done();
 }
-module.exports = function ttf2(done) {
-  return src('src/fonts/**/*.ttf')
-    .pipe(changed('build/fonts', {
-      extension: '.woff',
-      hasChanged: changed.compareLastModifiedTime
-    }))
-    .pipe(ttf2woff())
-    .pipe(dest('build/fonts'))
-  done();
-}
