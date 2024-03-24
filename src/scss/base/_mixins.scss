@@ -10,31 +10,6 @@
 	}
 }
 
-@mixin font-face-variations($name, $file, $weight: 400,$stretch: normal, $style: normal) {
-	@font-face {
-		font-family: "#{$name}";
-		src: local("#{$file}"),
-		url('../fonts/#{$file}.woff2') format('woff2 supports variations'),
-		url('../fonts/#{$file}.woff2') format('woff2-variations');
-		font-weight: $weight;
-    font-stretch: $stretch;
-											//ultra-condensed — 50%;
-											//extra-condensed — 62.5%;
-											//condensed — 75%;
-											//semi-condensed — 87.5%;
-											//normal — 100%;
-											//semi-expanded — 112.5%;
-											//expanded — 125%;
-											//extra-expanded — 150%;
-											//ultra-expanded — 200%.
-		font-style: $style;
-		font-display: swap;
-	}
-}
-@mixin font-variation($wght,$wdth,$opsz){
-	font-variation-settings: 'wght' $wght, 'wdth' $wdth, 'opsz' $opsz;
-}
-
 @mixin bg ($size:"contain", $position: "center") {
 	background-size: #{$size};
 	background-position: #{$position};
