@@ -6,17 +6,15 @@
 		url('../fonts/#{$file}.woff2') format('woff2-variations');
 		font-weight: $weight;
     font-stretch: $stretch;
-											//ultra-condensed — 50%;
-											//extra-condensed — 62.5%;
-											//condensed — 75%;
-											//semi-condensed — 87.5%;
-											//normal — 100%;
-											//semi-expanded — 112.5%;
-											//expanded — 125%;
-											//extra-expanded — 150%;
-											//ultra-expanded — 200%.
-		font-style: $style;
-		font-display: swap;
+		font-style: $style;//ultra-condensed — 50%;
+		font-display: swap;//extra-condensed — 62.5%;
+											 //condensed — 75%;
+											 //semi-condensed — 87.5%;
+											 //normal — 100%;
+											 //semi-expanded — 112.5%;
+											 //expanded — 125%;
+											 //extra-expanded — 150%;
+											 //ultra-expanded — 200%.
 	}
 }
 @mixin border-img-big($size,$line,$url,$slice,$repeat,$width,$outset){
