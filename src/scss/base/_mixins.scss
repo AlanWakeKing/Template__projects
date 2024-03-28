@@ -1,10 +1,17 @@
-@mixin font-face($name, $file, $weight: 400, $style: normal) {
+@mixin font-face($name, $file, $weight, $style: normal) {
 	@font-face {
 		font-family: "#{$name}";
 		src: local("#{$file}"),
 		url('../fonts/#{$file}.woff2') format('woff2'),
 		url('../fonts/#{$file}.woff') format('woff');
-		font-weight: $weight;
+		@if $weight == 'regular'
+		{
+			font-weight: 400;
+		} @else if $weight == 'bold'{
+			font-weight: 700;
+		} @else if $weight == 'light'{
+			font-weight: 300;
+		}		
 		font-style: $style;
 		font-display: swap;
 	}

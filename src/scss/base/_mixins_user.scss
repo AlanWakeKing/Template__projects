@@ -34,17 +34,10 @@
 	font-variation-settings: 'wght' $wght, 'wdth' $wdth, 'opsz' $opsz;
 }
 
-@mixin box-shadow($x,$y,$blur,$z,$color){
-	box-shadow:$x $y $blur $z $color;
+@mixin box-shadow($string){
+	box-shadow:$string;
 }
 
-@mixin text-shadow($x,$y,$blur,$z,$color){
-	text-shadow:$x $y $blur $z $color;
-}
-@mixin box-shadow-in($x,$y,$blur,$z,$color){
-	box-shadow:inset $x $y $blur $z $color;
-}
-
-@mixin text-shadow-in($x,$y,$blur,$z,$color){
-	text-shadow:inset $x $y $blur $z $color;
+@mixin text-shadow($string){
+	text-shadow:$string;
 }

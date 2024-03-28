@@ -2,9 +2,3 @@
 @import 'global/*.scss';
 @import '**/_*.scss';
 @import '../components/**/*.scss';
-
-div{
-	@include box-shadow(1px,1px,1px,1px,#000);
-	@include box-shadow(2px,2px,2px,2px,#002);
-	@include box-shadow(3px,3px,3px,3px,#001);
-}
